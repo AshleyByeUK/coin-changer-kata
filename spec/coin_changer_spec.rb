@@ -20,6 +20,7 @@ describe CoinChanger do
       assertExchanged(50, [50])
       assertExchanged(100, [100])
       assertExchanged(200, [200])
+      assertExchanged(3, [2, 1])
     end
   end
 end
