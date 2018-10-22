@@ -1,27 +1,30 @@
 class CoinChanger
+  COINS = [200, 100, 50, 20, 10, 5, 2, 1]
+
   def exchange(amount)
     if (amount == nil or amount <= 0)
       [0]
     else
-      count_coins(amount)
+      build_list_of_coins(amount)
     end
   end
 
-  def count_coins(amount)
+  def build_list_of_coins(amount)
     coins = []
-      [200, 100, 50, 20, 10, 5, 2, 1].each do |coin|
-        if amount / coin > 0
-          number_of_coins = amount / coin
-          add_coins(coins, coin, number_of_coins)
-          amount = amount % coin
-        end
-      end
-      coins
+    amount_remaining = amount
+    COINS.each do |coin|
+      number_of_coin = amount_remaining / coin
+      coins = add_coins(coins, coin, number_of_coin)
+      amount_remaining = amount_remaining % coin
+    end
+    coins
   end
 
   def add_coins(current_coins, coin, number)
+    coins = current_coins.dup
     for i in 1..number do
-      current_coins.push(coin)
+      coins.push(coin)
     end
+    coins
   end
 end
