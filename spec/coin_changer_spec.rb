@@ -34,6 +34,7 @@ describe CoinChanger do
       assertExchanged(20, [20])
       assertExchanged(21, [20, 1])
       assertExchanged(50, [50])
+      assertExchanged(51, [50, 1])
       assertExchanged(100, [100])
       assertExchanged(200, [200])
     end
