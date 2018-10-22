@@ -1,0 +1,13 @@
+{
+    "ruby.useLanguageServer": true,
+    "ruby.lint": {"rubocop": true},
+    "ruby.format": "rubocop",
+    "ruby.codeCompletion": "rcodetools",
+    "ruby.intellisense": "rubyLocate",
+    "macros": {
+        "unitTests": [
+            "workbench.action.terminal.kill",
+            {"command": "workbench.action.tasks.runTask", "args": "bundle exec rspec"}
+        ]
+    }
+}
