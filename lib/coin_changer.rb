@@ -11,7 +11,7 @@ class CoinChanger
 
   def count_coins(amount)
     coins = []
-      [5, 2, 1].each do |coin|
+      [10, 5, 2, 1].each do |coin|
         if amount / coin > 0
           number_of_coins = amount / coin
           add_coins(coins, coin, number_of_coins)
