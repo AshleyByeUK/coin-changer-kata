@@ -1,9 +1,10 @@
 class CoinExchanger
   def exchange(amount)
-    if amount > 2
-      [2, 1]
-    else
-      [amount]
+    coins = []
+    while amount > 2
+      coins.push(2)
+      amount -= 2
     end
+    coins.push(amount)
   end
 end
