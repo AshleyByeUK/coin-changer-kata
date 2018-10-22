@@ -20,9 +20,9 @@ class CoinChanger
     coins
   end
 
-  def add_coins(current_coins, coin, number)
+  def add_coins(current_coins, coin, number_of_coin)
     coins = current_coins.dup
-    for i in 1..number do
+    for i in 1..number_of_coin do
       coins.push(coin)
     end
     coins
