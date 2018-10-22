@@ -2,7 +2,7 @@ class CoinExchanger
   def exchange(amount)
     coins = []
     if amount > 0
-      [10, 5, 2, 1].each do |coin|
+      [20, 10, 5, 2, 1].each do |coin|
         while amount >= coin
           coins.push(coin)
           amount -= coin
