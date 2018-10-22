@@ -7,14 +7,16 @@ class CoinChanger
     else
       coins = []
       number_of_coins = amount / 2
-      for i in 1..number_of_coins do
-        coins.push(2)
-      end
-      remaining_amount = amount % 2
-      for i in 1..remaining_amount do
-        coins.push(1)
-      end
+      add_coins(coins, 2, number_of_coins)
+      number_of_coins = amount % 2
+      add_coins(coins, 1, number_of_coins)
       coins
+    end
+  end
+
+  def add_coins(current_coins, coin, number)
+    for i in 1..number do
+      current_coins.push(coin)
     end
   end
 end
