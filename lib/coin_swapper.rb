@@ -1,5 +1,17 @@
 class CoinSwapper
   def swap(amount)
-    [amount]
+    if amount > 0
+      coins = []
+      if amount >= 2
+        amount -= 2
+        coins.push(2)
+      end
+      if amount == 1
+        coins.push(1)
+      end
+      coins
+    else
+      [0]
+    end
   end
 end

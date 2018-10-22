@@ -7,6 +7,7 @@ describe CoinSwapper do
       assert_swaps(0, [0])
       assert_swaps(1, [1])
       assert_swaps(2, [2])
+      assert_swaps(3, [2, 1])
     end
   end
 end
