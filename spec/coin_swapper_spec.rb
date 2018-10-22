@@ -6,6 +6,7 @@ describe CoinSwapper do
     it 'returns a list of coins' do
       swapper = CoinSwapper.new()
       expect(swapper.swap(0)).to eq [0]
+      expect(swapper.swap(1)).to eq [1]
     end
   end
 end

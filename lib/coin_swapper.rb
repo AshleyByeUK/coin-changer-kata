@@ -1,5 +1,5 @@
 class CoinSwapper
   def swap(amount)
-    [0]
+    [amount]
   end
 end
