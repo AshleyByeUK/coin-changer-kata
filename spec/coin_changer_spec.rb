@@ -22,6 +22,7 @@ describe CoinChanger do
       assertExchanged(200, [200])
       assertExchanged(3, [2, 1])
       assertExchanged(4, [2, 2])
+      assertExchanged(6, [2, 2, 2])
     end
   end
 end
