@@ -1,16 +1,15 @@
 class CoinExchanger
   def exchange(amount)
     coins = []
-    while amount >= 5
-      coins.push(5)
-      amount -= 5
-    end
-    while amount > 2
-      coins.push(2)
-      amount -= 2
-    end
-    if amount > 0 or coins.length == 0
-      coins.push(amount)
+    if amount > 0
+      [10, 5, 2, 1].each do |coin|
+        while amount >= coin
+          coins.push(coin)
+          amount -= coin
+        end
+      end
+    else
+      coins.push(0)
     end
     coins
   end
