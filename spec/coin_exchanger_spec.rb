@@ -12,6 +12,7 @@ describe CoinExchanger do
       assert_exchanges(4, [2, 2])
       assert_exchanges(5, [5])
       assert_exchanges(6, [5, 1])
+      assert_exchanges(7, [5, 2])
     end
   end
 
