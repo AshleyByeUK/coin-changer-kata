@@ -2,7 +2,7 @@ class CoinSwapper
   def swap(amount)
     if amount > 0
       coins = []
-      if amount >= 2
+      while amount >= 2
         amount -= 2
         coins.push(2)
       end
